@@ -40,7 +40,7 @@ updateInput(e) {
 				<input class="btn ipt" type="textbox" placeholder="New Todo" value={this.state.input} onChange={this.updateInput.bind(this)}/>
 				<button class="btn submit">Submit</button>
 			</form>
-			
+			<p class="invisible">_______________________</p>
 			<ul onClick={(e) => {this.Pop(e)}}>
 				{this.props.todo.map((todo, index) => 
 					<TodoItem key={index} idx={index} rem={this.Pop.bind(this)} click={this.props.Del.bind(this)} todo={this.props.todo[index]}/>
